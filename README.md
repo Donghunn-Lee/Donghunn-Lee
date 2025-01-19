@@ -1,4 +1,4 @@
-## // LEE DONG HUN.
+## // LEE DONG HUN(Ethan).
 Front-End-oriented
 
 [![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=dh82680)](https://solved.ac/dh82680/)
