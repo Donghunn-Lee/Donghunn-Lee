@@ -6,15 +6,6 @@
 
 ---
 
-## 📝 GitHub Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Donghunn-Lee&show_icons=true&theme=radical" alt="GitHub Stats" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Donghunn-Lee&theme=radical" alt="GitHub Streak" />
-</div>
-
----
-
 ## 🛠️ Skills
 
 ### Frontend
@@ -29,16 +20,6 @@
   <img src="https://img.shields.io/badge/React-61DAFB.svg?&style=for-the-badge&logo=React&logoColor=black" alt="React" />
   <img src="https://img.shields.io/badge/Next.js-000000.svg?&style=for-the-badge&logo=Next.js&logoColor=white" alt="Next.js" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4.svg?&style=for-the-badge&logo=TailwindCSS&logoColor=white" alt="Tailwind CSS" />
-</div>
-
----
-
-## 🏆 Algorithm
-
-<div align="center">
-  <a href="https://solved.ac/dh82680/">
-    <img src="http://mazassumnida.wtf/api/generate_badge?boj=dh82680" alt="Solved.ac Profile" />
-  </a>
 </div>
 
 ---
@@ -63,6 +44,27 @@
     </tr>
   </table>
 </div>
+
+---
+
+## 📝 GitHub Stats
+
+<div align="center" diplay="flex">
+  <img src="https://github-readme-stats.vercel.app/api?username=Donghunn-Lee&show_icons=true&theme=radical" alt="GitHub Stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Donghunn-Lee&theme=radical" alt="GitHub Streak" />
+</div>
+
+---
+
+## 🏆 Algorithm
+
+<div align="center">
+  <a href="https://solved.ac/dh82680/">
+    <img src="http://mazassumnida.wtf/api/generate_badge?boj=dh82680" alt="Solved.ac Profile" />
+  </a>
+</div>
+
+
 
 ---
 
