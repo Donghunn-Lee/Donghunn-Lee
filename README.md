@@ -3,7 +3,7 @@
   <p>Frontend Developer</p>
   <p><strong>요청이 실패해도 멈추지 않는 화면과,<br/>프레임 단위 상호작용의 state/ref 경계를 설계합니다.</strong></p>
 
-  <a href="https://github.com/Donghunn-Lee"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"/></a>&nbsp;<a href="https://velog.io/@dh82680"><img src="https://img.shields.io/badge/Velog-20C997?style=flat-square&logo=velog&logoColor=white"/></a>&nbsp;<a href="mailto:dh82680@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=gmail&logoColor=white"/></a>
+  <a href="https://github.com/Donghunn-Lee"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"/></a>&nbsp;<a href="https://donghunn-lee-blog.vercel.app"><img src="https://img.shields.io/badge/Blog-20C997?style=flat-square&logo=rss&logoColor=white"/></a>&nbsp;<a href="mailto:dh82680@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=gmail&logoColor=white"/></a>
 </div>
 
 <br/>
@@ -11,7 +11,7 @@
 ## About
 
 - 외부 데이터에 의존하는 조회형 서비스(SlateKR)와 프레임 단위 상호작용 프로젝트(AimTest)를 각각 1인 개발로 마쳤습니다.
-- 조사 · 코드 생성에 AI를 활용하되 설계 · 검증 · 판단은 직접 합니다. 작업은 세션 단위로 문서화해, 어떤 변경이든 당시의 판단 과정을 추적할 수 있도록 해왔습니다.
+- 방향과 범위, 설계안의 채택 여부, 결과 확인은 직접 맡습니다. 설계안은 Claude와 논의해 정하고, 조사와 코드 생성은 Claude Code에 위임합니다([SlateKR 개발 방식](https://github.com/Donghunn-Lee/slate-kr#개발-방식)). 작업은 세션 단위로 문서화해, 어떤 변경이든 당시의 판단 과정을 추적할 수 있도록 해왔습니다.
 
 ---
 
@@ -31,12 +31,13 @@
 
 ### [SlateKR](https://github.com/Donghunn-Lee/slate-kr) — 국내 상장 종목 가격 · 재무 · 공시 조회 웹앱
 
-개인 프로젝트 · 2026.04 ~ 2026.10 &nbsp;|&nbsp; [Live](https://slate-kr.vercel.app) · [GitHub](https://github.com/Donghunn-Lee/slate-kr)
+개인 프로젝트 · 2026.04 ~ 2026.11 &nbsp;|&nbsp; [Live(가상 데이터 데모)](https://slate-kr.vercel.app) · [GitHub](https://github.com/Donghunn-Lee/slate-kr)
 
 <img width="800" alt="SlateKR 홈" src="https://github.com/Donghunn-Lee/slate-kr/raw/main/docs/images/hero.png" />
 
-약 2,650개 종목과 국내 · 해외 지수 12개를 다루는 조회 서비스. 데이터가 외부 API 여러 곳에서 오고 장중에 계속 바뀌어, 한 곳이 늦거나 실패해도 화면을 유지하는 것이 과제였습니다.
-섹션 단위 Suspense로 loading · empty · error · 부분 실패를 구분 — KIS 3초 지연 주입 시 헤더 표시 3.4초 → 0.3초 · 차트 hover 리렌더 0. 설계 결정은 [README 「한눈에 보기」](https://github.com/Donghunn-Lee/slate-kr#한눈에-보기)에.
+국내 상장 종목과 국내 · 해외 지수 12개를 다루는 조회 서비스. 종목 상세 한 페이지가 DB · DART · 시세 API 세 곳에서 데이터를 받아, 한 곳이 늦거나 실패해도 화면을 유지하는 것이 과제였습니다.
+섹션 단위 Suspense로 loading · empty · error · 부분 실패를 구분 — 시세 API 응답을 3초 늦춘 조건에서 헤더 표시 약 3.4초 → 0.3초 · 차트 hover 리렌더 0.
+국내 시세는 재배포가 허용되지 않아 가격 계열만 결정론적 생성기로 대체했습니다(재무 · 공시는 DART 실데이터). Live 상단 배너의 장애 시뮬레이션으로 가격 API 지연 · 실패 시의 화면을 직접 볼 수 있습니다. 설계 결정은 [README 「한눈에 보기」](https://github.com/Donghunn-Lee/slate-kr#한눈에-보기)에.
 
 `Next.js 16 App Router` `TypeScript` `Tailwind CSS v4` `TanStack Query v5` `Zustand` `Zod` `Neon PostgreSQL` `Vitest`
 
@@ -61,23 +62,24 @@ Codeit Sprint 프론트엔드 부트캠프에서 진행한 팀 프로젝트입�
 
 | | 담당 | 구성 · 기간 | 링크 |
 |---|---|---|---|
-| **Coworkers** — 업무 진행 상황을 시각화하는 협업 서비스 | 인증 · 접근 제어(Next.js middleware) · 서버/UI 상태 책임 분리(React Query / Zustand persist) · 공통 타입 체계 | FE 5인 · 팀장 · 2025.01 ~ 02 | [Live](https://coworkers-delta.vercel.app) · [GitHub](https://github.com/Team-7-Coworkers/coworkers) |
+| **Coworkers** — 업무 진행 상황을 시각화하는 협업 서비스 | 인증 · 접근 제어(Next.js middleware) · 서버/UI 상태 책임 분리(React Query / Zustand persist) · 공통 타입 체계 | FE 5인 · 팀장 · 2025.01 ~ 02 | [Live](https://coworkers-11-4-7.vercel.app) · [GitHub](https://github.com/Team-7-Coworkers/coworkers) |
 | **Taskify** — Drag & Drop 기반 협업 대시보드 | 칸반 대시보드(dnd-kit) — DragOver 로컬 갱신 · DragEnd 동기화 · 실패 시 롤백 | FE 5인 · 팀장 · 2024.12 | [Live](https://taskify-11-3-8.netlify.app) · [GitHub](https://github.com/Codeit-Sprint-Part-3-Team-8/Taskify) |
 
 ---
 
 ## Writing
 
-프로젝트별 개발 일지를 [velog](https://velog.io/@dh82680)에 기록합니다 (SlateKR 187편 · AimTest 25편).
+프로젝트별 개발 일지를 [블로그](https://donghunn-lee-blog.vercel.app)에 기록합니다 — [SlateKR 시리즈](https://donghunn-lee-blog.vercel.app/blog/slatekr/) · [AimTest 시리즈](https://donghunn-lee-blog.vercel.app/blog/aimtest/).
 
-- [[SlateKR #174] 선언만 있던 revalidate와 한 달 멈춰 있던 차트 당일 봉](https://velog.io/@dh82680/SlateKR-174-%EC%84%A0%EC%96%B8%EB%A7%8C-%EC%9E%88%EB%8D%98-revalidate%EC%99%80-%ED%95%9C-%EB%8B%AC-%EB%A9%88%EC%B6%B0-%EC%9E%88%EB%8D%98-%EC%B0%A8%ED%8A%B8-%EB%8B%B9%EC%9D%BC-%EB%B4%89)
-- [[SlateKR #178] 모바일 홈 자동 스크롤과 글꼴 로딩에 따른 레이아웃 변동](https://velog.io/@dh82680/SlateKR-178-%EB%AA%A8%EB%B0%94%EC%9D%BC-%ED%99%88-%EC%9E%90%EB%8F%99-%EC%8A%A4%ED%81%AC%EB%A1%A4%EA%B3%BC-%EA%B8%80%EA%BC%B4-%EB%A1%9C%EB%94%A9%EC%97%90-%EB%94%B0%EB%A5%B8-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83-%EB%B3%80%EB%8F%99)
-- [[SlateKR #075] intraday 실패 캐시 결함 해결](https://velog.io/@dh82680/SlateKR-075-intraday-%EC%8B%A4%ED%8C%A8-%EC%BA%90%EC%8B%9C-%EA%B2%B0%ED%95%A8-%ED%95%B4%EA%B2%B0)
-- [[AimTest #24] 마우스 점프와 결과 창에서 살아나던 루프](https://velog.io/@dh82680/AimTest-24-%EB%A7%88%EC%9A%B0%EC%8A%A4-%EC%A0%90%ED%94%84%EC%99%80-%EA%B2%B0%EA%B3%BC-%EC%B0%BD%EC%97%90%EC%84%9C-%EC%82%B4%EC%95%84%EB%82%98%EB%8D%98-%EB%A3%A8%ED%94%84)
+- [[SlateKR #188] 시세 데이터 약관 전수 조사와 라이브 중단](https://donghunn-lee-blog.vercel.app/blog/slatekr/188/)
+- [[SlateKR #174] 선언만 있던 revalidate와 한 달 멈춰 있던 차트 당일 봉](https://donghunn-lee-blog.vercel.app/blog/slatekr/174/)
+- [[SlateKR #178] 모바일 홈 자동 스크롤과 글꼴 로딩에 따른 레이아웃 변동](https://donghunn-lee-blog.vercel.app/blog/slatekr/178/)
+- [[SlateKR #075] intraday 실패 캐시 결함 해결](https://donghunn-lee-blog.vercel.app/blog/slatekr/075/)
+- [[AimTest #24] 마우스 점프와 결과 창에서 살아나던 루프](https://donghunn-lee-blog.vercel.app/blog/aimtest/24/)
 
 ---
 
 ## Contact
 
 - 📧 dh82680@gmail.com
-- 📝 [velog.io/@dh82680](https://velog.io/@dh82680)
+- 📝 [donghunn-lee-blog.vercel.app](https://donghunn-lee-blog.vercel.app)
