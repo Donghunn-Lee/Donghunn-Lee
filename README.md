@@ -29,7 +29,7 @@
 
 ## Projects
 
-### [SlateKR](https://github.com/Donghunn-Lee/slate-kr) — 국내 상장 종목 가격 · 재무 · 공시 조회 웹앱
+### [SlateKR — 국내 상장 종목 가격 · 재무 · 공시 조회 웹앱]
 
 개인 프로젝트 · 2026.04 ~ 2026.11 &nbsp;|&nbsp; [Live(가상 데이터 데모)](https://slate-kr.vercel.app) · [GitHub](https://github.com/Donghunn-Lee/slate-kr)
 
@@ -43,7 +43,7 @@
 
 <br/>
 
-### [AimTest](https://github.com/Donghunn-Lee/aimtest) — 브라우저 1인칭 에임 트레이너
+### [AimTest — 브라우저 1인칭 에임 트레이너]
 
 개인 프로젝트 · 2025.03 ~ 05 · 2025.10 ~ 2026.02 · 재정비 2026.10 &nbsp;|&nbsp; [Live](https://fps-aim-test.vercel.app) · [GitHub](https://github.com/Donghunn-Lee/aimtest)
 
